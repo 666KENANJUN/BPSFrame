@@ -11,16 +11,23 @@ using UnityEngine.SceneManagement;
 //*****************************************
 public class InitManager : MonoBehaviour
 {
-    async void Start()
+    void Start()
     {
-        await Init();
+        Init();
     }
 
-    async UniTask Init()
+    void Init()
     {
+        LoadAsset();
+        
         SceneSystem.LoadSceneAsync("Level 1");
         EventSystem.AddEventListener<float>("LoadingSceneProgress", LoadProgress);
         EventSystem.AddEventListener("LoadSceneSucceed",LoadSceneSucceed);
+    }
+
+    private void LoadAsset()
+    {
+        
     }
 
     private void LoadSceneSucceed()
