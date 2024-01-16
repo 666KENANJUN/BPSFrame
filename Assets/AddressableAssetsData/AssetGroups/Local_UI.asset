@@ -18,7 +18,7 @@ MonoBehaviour:
   m_GUID: c27c8e94fae544d4198925727caa1893
   m_SerializeEntries:
   - m_GUID: ece95bd8a77eb6b4bba249415c9b25ab
-    m_Address: TestUI
+    m_Address: UI_GameWindow
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

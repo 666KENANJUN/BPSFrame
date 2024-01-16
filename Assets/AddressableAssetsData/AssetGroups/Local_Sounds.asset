@@ -16,7 +16,12 @@ MonoBehaviour:
   m_Data:
     m_SerializedData: []
   m_GUID: 2677b3651b7394143a1d2719ed9faa89
-  m_SerializeEntries: []
+  m_SerializeEntries:
+  - m_GUID: fdbd9ba35abbc1f429018fc3337bb30b
+    m_Address: BGMusic
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: e8ad6501b0bc3af48b45f79906acff2b, type: 2}
   m_SchemaSet:
