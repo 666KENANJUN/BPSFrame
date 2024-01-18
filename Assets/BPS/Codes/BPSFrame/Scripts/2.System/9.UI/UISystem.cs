@@ -83,7 +83,7 @@ namespace BPSFrame
                     {
                         UI_WindowBase window = ResSystem.InstantiateGameObject<UI_WindowBase>(windowData.assetPath, UILayers[windowData.layerNum].root, windowKey);
                         windowData.instance = window;
-                        window.Init();
+                        window.InitAsync();
                         window.gameObject.SetActive(false);
                     }
                     else
@@ -256,7 +256,7 @@ namespace BPSFrame
             {
                 UI_WindowBase window = ResSystem.InstantiateGameObject<UI_WindowBase>(windowData.assetPath, UILayers[layerNum].root, windowKey);
                 windowData.instance = window;
-                window.Init();
+                window.InitAsync();
                 window.ShowGeneralLogic();
             }
             windowData.layerNum = layerNum;

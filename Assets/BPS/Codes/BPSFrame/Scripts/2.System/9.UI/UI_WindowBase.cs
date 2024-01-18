@@ -19,20 +19,20 @@ namespace BPSFrame
         /// <summary>
         /// 初始化
         /// </summary>
-        public virtual void Init() { }
+        public virtual void InitAsync() { }
 
         public void ShowGeneralLogic()
         {
             uiEnable = true;
             OnUpdateLanguage();
             RegisterEventListener();
-            OnShow();
+            OnShowAsync();
         }
 
         /// <summary>
         /// 显示
         /// </summary>
-        public virtual void OnShow() { }
+        public virtual void OnShowAsync() { }
 
 
         public void CloseGeneralLogic()

@@ -15,14 +15,8 @@ public class GameManager : MonoBehaviour
     AudioClip BGClip;
     void Start()
     {
-        BGClip = ResSystem.LoadAsset<AudioClip>("BGMusic");
-        SceneSystem.LoadSceneAsync("Level Main",Init,LoadSceneMode.Single);
+        UISystem.Show<UI_Login>();
     }
 
-    private async void Init(float obj)
-    {
-        AudioSystem.PlayBGAudio(BGClip);
-        await UniTask.Delay(500);
-        UISystem.Show<UI_GameWindow>();
-    }
+
 }

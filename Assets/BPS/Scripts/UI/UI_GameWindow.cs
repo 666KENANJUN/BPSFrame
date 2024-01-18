@@ -5,6 +5,9 @@ using BPSFrame;
 using UnityEngine.UI;
 using System;
 using Sirenix.OdinInspector;
+using System.Threading.Tasks;
+using Unity.VisualScripting;
+using Cinemachine;
 //*****************************************
 //创建人：BPS
 //创建时间：
@@ -22,16 +25,18 @@ public class UI_GameWindow : UI_WindowBase
     [SerializeField] private Button _exitGame;
 
 
-    public override void Init()
+    public override async void InitAsync()
     {
-        base.Init();
+        base.InitAsync();
         animator = GetComponent<Animator>();
+        AudioClip BGClip = await ResManager.LoadAssetAsync<AudioClip>("BGMusic");
+        AudioSystem.PlayBGAudio(BGClip);
     }
 
 
-    public override void OnShow()
+    public override void OnShowAsync()
     {
-        base.OnShow();
+        base.OnShowAsync();
         _sliderGlobalVolume.onValueChanged.AddListener(SetGlobalVolume);
         _sliderBGVolume.onValueChanged.AddListener(SetBGVolume);
         _sliderEffectVolume.onValueChanged.AddListener(SetEffectVolume);
